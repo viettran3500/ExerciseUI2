@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingBottom="50dp"
+    android:layout_gravity="center_horizontal"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:adjustViewBounds="true"
+        app:layout_constraintTop_toTopOf="@id/imgOnboarding3"
+        android:layout_marginTop="27dp"
+        android:src="@drawable/componente_5_2"
+        app:layout_constraintStart_toStartOf="@id/imgOnboarding3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></ImageView>
+
+    <ImageView
+        android:id="@+id/imgOnboarding3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_gruppo_di_maschere_5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginTop="56dp"
+        android:layout_marginLeft="45dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgOnboarding3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/raleway_black"
+            android:textSize="28sp"
+            android:textColor="#3e3e3e"
+            android:text="Keep your" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/raleway_black"
+            android:textSize="28sp"
+            android:textColor="#3e3e3e"
+            android:text="investment safe" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_light"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:text="Ex totam praesentium incidunt aut."/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

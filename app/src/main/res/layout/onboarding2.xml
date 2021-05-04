@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingBottom="50dp"
+    android:layout_gravity="center_horizontal"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:id="@+id/linearOnboarding2"
+        android:orientation="vertical"
+        android:layout_marginLeft="45dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:fontFamily="@font/raleway_black"
+            android:textSize="28sp"
+            android:textColor="#3e3e3e"
+            android:text="Follow our tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+        <TextView
+            android:fontFamily="@font/raleway_black"
+            android:textSize="28sp"
+            android:textColor="#3e3e3e"
+            android:text="to achieve success!"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+        <TextView
+            android:fontFamily="@font/lato_light"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:text="Ex totam praesentium incidunt aut."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+    </LinearLayout>
+    <ImageView
+        android:adjustViewBounds="true"
+        app:layout_constraintTop_toTopOf="@id/imgOnboarding2"
+        android:layout_marginTop="75dp"
+        android:src="@drawable/componente_4_1"
+        app:layout_constraintEnd_toEndOf="@id/imgOnboarding2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></ImageView>
+
+    <ImageView
+        android:id="@+id/imgOnboarding2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_gruppo_di_maschere_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearOnboarding2"></ImageView>
+</androidx.constraintlayout.widget.ConstraintLayout>
