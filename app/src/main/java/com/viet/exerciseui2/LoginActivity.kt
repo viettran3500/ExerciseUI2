@@ -15,5 +15,15 @@ class LoginActivity : AppCompatActivity() {
             val intent = Intent(this, SignUpActivity::class.java)
             startActivity(intent)
         }
+
+        btnForgotPassword.setOnClickListener {
+            val intent = Intent(this, EmailActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnLogin.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
