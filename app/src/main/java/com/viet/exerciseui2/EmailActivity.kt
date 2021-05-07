@@ -21,14 +21,13 @@ class EmailActivity : AppCompatActivity() {
         handler = Handler(thread.looper)
 
         runnable = Runnable {
-            if(count > 0){
+            if (count > 0) {
                 count--
                 this.runOnUiThread {
-                    textCountdown.text = "Wait " +  count + " seconds before sending it"
+                    textCountdown.text = "Wait " + count + " seconds before sending it"
                 }
                 handler.postDelayed(runnable, 1000)
-            }
-            else{
+            } else {
                 handler.removeCallbacks(runnable)
             }
         }
