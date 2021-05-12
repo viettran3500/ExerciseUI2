@@ -1,11 +1,13 @@
 package com.viet.exerciseui2
 
+import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
 
 class ViewPagerAdapter(fm: FragmentManager, behavior: Int) :
     FragmentStatePagerAdapter(fm, behavior) {
+
     override fun getCount(): Int {
         return 4
     }
@@ -27,4 +29,5 @@ class ViewPagerAdapter(fm: FragmentManager, behavior: Int) :
         }
         return HomeFragment()
     }
+
 }

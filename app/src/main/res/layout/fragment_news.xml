@@ -2,10 +2,13 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffffff"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <ImageView
         android:scaleType="centerCrop"
         android:src="@drawable/ic_componente_6_1"
@@ -42,7 +45,7 @@
         android:layout_height="wrap_content"></ImageView>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:background="#f8f8f8"
+        android:background="@drawable/bg_layout_menu"
         android:layout_marginTop="95dp"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_width="match_parent"
@@ -58,7 +61,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:layout_marginLeft="26dp"
+                    android:id="@+id/tvEditrial"
+                    android:layout_marginLeft="35dp"
                     android:paddingVertical="5dp"
                     android:paddingHorizontal="8dp"
                     android:background="@drawable/bg_textview"
@@ -69,6 +73,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"></TextView>
                 <TextView
+                    android:id="@+id/tvCrypto"
+                    android:paddingVertical="5dp"
+                    android:paddingHorizontal="8dp"
                     android:layout_marginHorizontal="17dp"
                     android:fontFamily="@font/lato_blackitalic"
                     android:textSize="12sp"
@@ -77,6 +84,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"></TextView>
                 <TextView
+                    android:id="@+id/tvRaw"
+                    android:paddingVertical="5dp"
+                    android:paddingHorizontal="8dp"
                     android:fontFamily="@font/lato_blackitalic"
                     android:textSize="12sp"
                     android:textColor="#222222"
@@ -84,6 +94,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"></TextView>
                 <TextView
+                    android:id="@+id/tvEconomics"
+                    android:paddingVertical="5dp"
+                    android:paddingHorizontal="8dp"
                     android:layout_marginLeft="17dp"
                     android:fontFamily="@font/lato_blackitalic"
                     android:textSize="12sp"
@@ -176,6 +189,7 @@
                 android:layout_height="wrap_content"></ImageView>
         </androidx.constraintlayout.widget.ConstraintLayout>
         <ImageView
+            android:id="@+id/imgnotification"
             app:layout_constraintEnd_toEndOf="@id/layoutatlantia"
             app:layout_constraintTop_toTopOf="@id/layoutatlantia"
             android:src="@drawable/alert"
@@ -329,4 +343,5 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
+
 </ScrollView>
