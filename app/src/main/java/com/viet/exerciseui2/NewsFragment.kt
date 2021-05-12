@@ -18,25 +18,6 @@ class NewsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         var view : View = inflater.inflate(R.layout.fragment_news, container, false)
-        var fragmentManager: FragmentManager? = getFragmentManager()
-        var newsArticleFragment : NewsArticleFragment = NewsArticleFragment()
-        var fragmentTransaction: FragmentTransaction = fragmentManager!!.beginTransaction()
-
-        view.layoutatlantia.setOnClickListener {
-            view.tvtitle.text = "Atlantia News"
-            fragmentTransaction.replace(R.id.fragment_article, newsArticleFragment)
-            fragmentTransaction.commit()
-        }
-        view.layoutxiaomi.setOnClickListener {
-            view.tvtitle.text = "Xiaomi News"
-            fragmentTransaction.replace(R.id.fragment_article, newsArticleFragment)
-            fragmentTransaction.commit()
-        }
-        view.layoutapple.setOnClickListener {
-            view.tvtitle.text = "Apple News"
-            fragmentTransaction.replace(R.id.fragment_article, newsArticleFragment)
-            fragmentTransaction.commit()
-        }
         return view
     }
 }

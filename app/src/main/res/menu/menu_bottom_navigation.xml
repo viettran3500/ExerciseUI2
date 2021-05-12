@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/item_home"
+        android:title=""
+        android:icon="@drawable/icons_8_increase"></item>
+
+    <item android:id="@+id/item_coin"
+        android:title=""
+        android:icon="@drawable/icons_8_chart"></item>
+
+    <item android:id="@+id/item_news"
+        android:title=""
+        android:icon="@drawable/icons_8_news"></item>
+
+    <item android:id="@+id/item_menu"
+        android:title=""
+        android:icon="@drawable/icons_8_customer"></item>
+</menu>
