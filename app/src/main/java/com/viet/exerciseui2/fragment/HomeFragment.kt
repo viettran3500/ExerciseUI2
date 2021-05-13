@@ -52,13 +52,17 @@ class HomeFragment : Fragment() {
 
                     dialog.setTitle("Notification")
                     dialog.setMessage("Do you agree to delete the item?")
-                    dialog.setPositiveButton("Yes", DialogInterface.OnClickListener { dialogInterface, i ->
-                        arrayListHome.removeAt(viewHolder.adapterPosition)
-                        adapterHome.notifyDataSetChanged()
-                    })
-                    dialog.setNegativeButton("No", DialogInterface.OnClickListener { dialogInterface, i ->
-                        adapterHome.notifyDataSetChanged()
-                    })
+                    dialog.setPositiveButton(
+                        "Yes",
+                        DialogInterface.OnClickListener { dialogInterface, i ->
+                            arrayListHome.removeAt(viewHolder.adapterPosition)
+                            adapterHome.notifyDataSetChanged()
+                        })
+                    dialog.setNegativeButton(
+                        "No",
+                        DialogInterface.OnClickListener { dialogInterface, i ->
+                            adapterHome.notifyDataSetChanged()
+                        })
                     dialog.show()
 
                 }
