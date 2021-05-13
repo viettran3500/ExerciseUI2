@@ -2,20 +2,20 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
-    android:paddingBottom="50dp"
+    android:layout_height="wrap_content"
     android:layout_gravity="center_horizontal"
-    android:layout_height="wrap_content">
+    android:paddingBottom="50dp">
 
     <ImageView
-        android:layout_marginLeft="25dp"
-        app:layout_constraintStart_toStartOf="@id/imgOnboarding1"
-        app:layout_constraintTop_toTopOf="@id/imgOnboarding1"
-        app:layout_constraintEnd_toEndOf="@id/imgOnboarding1"
-        android:layout_marginTop="145dp"
-        android:src="@drawable/tracciato_865"
-        android:adjustViewBounds="true"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"></ImageView>
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="145dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/tracciato_865"
+        app:layout_constraintEnd_toEndOf="@id/imgOnboarding1"
+        app:layout_constraintStart_toStartOf="@id/imgOnboarding1"
+        app:layout_constraintTop_toTopOf="@id/imgOnboarding1"></ImageView>
 
     <ImageView
         android:id="@+id/imgOnboarding1"

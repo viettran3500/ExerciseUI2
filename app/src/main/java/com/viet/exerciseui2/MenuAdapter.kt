@@ -8,9 +8,10 @@ import kotlinx.android.synthetic.main.item_rcv_one.view.*
 import kotlinx.android.synthetic.main.item_rcv_two.view.*
 
 class MenuAdapter
-    (private val listOne: MutableList<ListMenuOne>,
-     private val listTwo: MutableList<ListMenuTwo>
-): RecyclerView.Adapter<RecyclerView.ViewHolder>()   {
+    (
+    private val listOne: MutableList<ListMenuOne>,
+    private val listTwo: MutableList<ListMenuTwo>
+) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         val inflater = LayoutInflater.from(parent?.context)
         return when (viewType) {
@@ -29,7 +30,7 @@ class MenuAdapter
         holder.apply {
             when (holder) {
                 is TypeOneViewHodel -> holder.bind(listOne[position])
-                is TypeTwoViewHodel -> holder.bind(listTwo[position - listOne.size ])
+                is TypeTwoViewHodel -> holder.bind(listTwo[position - listOne.size])
             }
         }
     }
@@ -78,6 +79,7 @@ class MenuAdapter
         }
 
     }
+
     enum class ViewType(val type: Int) {
         TYPE_ONE(0),
         TYPE_TWO(1)

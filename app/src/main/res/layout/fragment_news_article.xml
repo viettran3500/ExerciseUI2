@@ -1,185 +1,203 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f8f8f8"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:background="#f8f8f8">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:scaleType="centerCrop"
             android:src="@drawable/ic_componente_6_1"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"></ImageView>
+            app:layout_constraintTop_toTopOf="parent"></ImageView>
+
         <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="48dp"
             android:src="@drawable/icons_8_expand_arrow"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"></ImageView>
+            app:layout_constraintTop_toTopOf="parent"></ImageView>
+
         <TextView
             android:id="@+id/tvtitle"
-            android:fontFamily="@font/raleway_black"
-            android:textSize="22sp"
-            android:textColor="#121212"
-            android:text="EDITORIAL NEWS"
-            android:layout_marginTop="45dp"
-            android:layout_marginLeft="69dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"></TextView>
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="69dp"
+            android:layout_marginTop="45dp"
+            android:fontFamily="@font/raleway_black"
+            android:text="EDITORIAL NEWS"
+            android:textColor="#121212"
+            android:textSize="22sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></TextView>
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:background="@drawable/bg_layout_menu"
-            android:layout_marginTop="95dp"
-            app:layout_constraintTop_toTopOf="parent"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginTop="95dp"
+            android:background="@drawable/bg_layout_menu"
+            app:layout_constraintTop_toTopOf="parent">
+
             <HorizontalScrollView
                 android:id="@+id/layouttop"
-                android:layout_marginTop="23dp"
-                app:layout_constraintTop_toTopOf="parent"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="23dp"
+                app:layout_constraintTop_toTopOf="parent">
+
                 <LinearLayout
-                    android:layout_gravity="center_horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+
                     <TextView
                         android:id="@+id/tvEditrial"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_marginLeft="35dp"
-                        android:paddingVertical="5dp"
-                        android:paddingHorizontal="8dp"
                         android:background="@drawable/bg_textview"
                         android:fontFamily="@font/lato_blackitalic"
-                        android:textSize="12sp"
-                        android:textColor="#222222"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="5dp"
                         android:text="EDITORIAL"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"></TextView>
+                        android:textColor="#222222"
+                        android:textSize="12sp"></TextView>
+
                     <TextView
                         android:id="@+id/tvCrypto"
-                        android:paddingVertical="5dp"
-                        android:paddingHorizontal="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_marginHorizontal="17dp"
                         android:fontFamily="@font/lato_blackitalic"
-                        android:textSize="12sp"
-                        android:textColor="#222222"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="5dp"
                         android:text="CRYPTO NEWS"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"></TextView>
+                        android:textColor="#222222"
+                        android:textSize="12sp"></TextView>
+
                     <TextView
                         android:id="@+id/tvRaw"
-                        android:paddingVertical="5dp"
-                        android:paddingHorizontal="8dp"
-                        android:fontFamily="@font/lato_blackitalic"
-                        android:textSize="12sp"
-                        android:textColor="#222222"
-                        android:text="RAW MATERIAL"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"></TextView>
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lato_blackitalic"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="5dp"
+                        android:text="RAW MATERIAL"
+                        android:textColor="#222222"
+                        android:textSize="12sp"></TextView>
+
                     <TextView
                         android:id="@+id/tvEconomics"
-                        android:paddingVertical="5dp"
-                        android:paddingHorizontal="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:fontFamily="@font/lato_blackitalic"
-                        android:textSize="12sp"
-                        android:textColor="#222222"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="5dp"
                         android:text="ECONOMICS"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"></TextView>
+                        android:textColor="#222222"
+                        android:textSize="12sp"></TextView>
                 </LinearLayout>
             </HorizontalScrollView>
+
             <ImageView
-                android:layout_marginTop="32dp"
-                android:layout_marginHorizontal="27dp"
                 android:id="@+id/imgraggruppa_16"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@id/layouttop"
-                android:src="@drawable/raggruppa_166"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"></ImageView>
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="27dp"
+                android:layout_marginTop="32dp"
+                android:src="@drawable/raggruppa_166"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/layouttop"></ImageView>
+
             <TextView
                 android:id="@+id/tvcry"
-                android:paddingVertical="2dp"
-                android:paddingHorizontal="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="7dp"
                 android:background="@drawable/bg_textview_news"
                 android:fontFamily="@font/raleway_medium"
-                android:textSize="9sp"
-                android:textColor="#0a0909"
+                android:paddingHorizontal="4dp"
+                android:paddingVertical="2dp"
                 android:text="CRYPTOCURRENCY"
-                android:layout_marginRight="7dp"
-                android:layout_marginTop="5dp"
+                android:textColor="#0a0909"
+                android:textSize="9sp"
                 app:layout_constraintEnd_toEndOf="@id/imgraggruppa_16"
-                app:layout_constraintTop_toBottomOf="@id/imgraggruppa_16"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"></TextView>
+                app:layout_constraintTop_toBottomOf="@id/imgraggruppa_16"></TextView>
+
             <ImageView
                 android:id="@+id/img_icons_8_calendar"
-                android:layout_marginTop="10dp"
-                app:layout_constraintStart_toStartOf="@id/imgraggruppa_16"
-                app:layout_constraintTop_toBottomOf="@id/tvcry"
-                android:src="@drawable/icons_8_calendar"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"></ImageView>
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/icons_8_calendar"
+                app:layout_constraintStart_toStartOf="@id/imgraggruppa_16"
+                app:layout_constraintTop_toBottomOf="@id/tvcry"></ImageView>
+
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="9dp"
                 android:fontFamily="@font/lato_light"
-                android:textStyle="italic"
-                android:textSize="12sp"
-                android:textColor="#000000"
                 android:text="02 Set 2020"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                android:textStyle="italic"
                 app:layout_constraintStart_toStartOf="@id/img_icons_8_calendar"
-                app:layout_constraintTop_toBottomOf="@id/img_icons_8_calendar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"></TextView>
+                app:layout_constraintTop_toBottomOf="@id/img_icons_8_calendar"></TextView>
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/layout"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
                 android:layout_marginTop="10dp"
                 android:background="#6021ea"
                 app:layout_constraintEnd_toEndOf="@id/tvcry"
-                app:layout_constraintTop_toBottomOf="@id/tvcry"
-                android:layout_width="200dp"
-                android:layout_height="50dp">
+                app:layout_constraintTop_toBottomOf="@id/tvcry">
+
                 <TextView
                     android:id="@+id/tv_what"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:fontFamily="@font/raleway_black"
-                    android:textSize="18sp"
-                    android:textColor="#ffffff"
                     android:text="What is the future of"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"></TextView>
-                <TextView
-                    android:fontFamily="@font/raleway_black"
-                    android:textSize="18sp"
                     android:textColor="#ffffff"
-                    android:text="cryptocurrencies?"
+                    android:textSize="18sp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_what"
+                    app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"></TextView>
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/raleway_black"
+                    android:text="cryptocurrencies?"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_what"></TextView>
             </androidx.constraintlayout.widget.ConstraintLayout>
+
             <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="27dp"
                 android:layout_marginTop="32dp"
                 android:fontFamily="@font/lato_bold"
-                android:textSize="13sp"
-                android:textColor="#000000"
                 android:text="@string/news_article"
-                android:layout_marginHorizontal="27dp"
-                app:layout_constraintTop_toBottomOf="@id/layout"
+                android:textColor="#000000"
+                android:textSize="13sp"
                 app:layout_constraintStart_toStartOf="parent"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"></TextView>
+                app:layout_constraintTop_toBottomOf="@id/layout"></TextView>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -1,37 +1,37 @@
 package com.viet.exerciseui2
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.os.Handler
 import android.os.HandlerThread
 import kotlinx.android.synthetic.main.activity_email.*
 
 class EmailActivity : AppCompatActivity() {
 
-    var count: Int = 30
-    var thread: HandlerThread = HandlerThread("Thread")
-    lateinit var runnable: Runnable
-    lateinit var handler: Handler
+    lateinit var countDownTimer: CountDownTimer
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_email)
 
-        thread.start()
-        handler = Handler(thread.looper)
-
-        runnable = Runnable {
-            if (count > 0) {
-                count--
-                this.runOnUiThread {
-                    textCountdown.text = "Wait " + count + " seconds before sending it"
-                }
-                handler.postDelayed(runnable, 1000)
-            } else {
-                handler.removeCallbacks(runnable)
+        countDownTimer = object : CountDownTimer(30000, 1000){
+            override fun onTick(p0: Long) {
+                textCountdown.text = "Wait ${p0/1000} seconds before sending it"
             }
+
+            override fun onFinish() {
+                updatePassword()
+                startActivity(Intent(this@EmailActivity, ConfirmActivity::class.java))
+                finish()
+            }
+
         }
 
-        handler.post(runnable)
+        btnResendEmail.setOnClickListener {
+            countDownTimer.start()
+        }
+
     }
 }

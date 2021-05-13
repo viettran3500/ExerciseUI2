@@ -14,10 +14,10 @@ class NewsArticleFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        var view : View = inflater.inflate(R.layout.fragment_news_article, container, false)
-        var bundle : Bundle? = arguments
+        var view: View = inflater.inflate(R.layout.fragment_news_article, container, false)
+        var bundle: Bundle? = arguments
         var title = ""
-        if(bundle!=null){
+        if (bundle != null) {
             title = bundle.getString("data").toString()
             view.tvtitle.text = title
         }

@@ -5,125 +5,139 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingBottom="50dp">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layout"
-            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            app:layout_constraintTop_toTopOf="parent">
+
             <ImageView
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:src="@drawable/ic_componente_7_3"
-                android:scaleType="centerCrop"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"></ImageView>
+                android:layout_height="match_parent"
+                android:scaleType="center"
+                android:src="@drawable/ic_componente_7_3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></ImageView>
+
             <TextView
                 android:id="@+id/tradix"
-                android:layout_marginRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="110dp"
-                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/raleway_black"
+                android:text="TRADIX"
+                android:textColor="#2b2828"
+                android:textSize="40sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                android:fontFamily="@font/raleway_black"
-                android:textSize="40sp"
-                android:textColor="#2b2828"
-                android:text="TRADIX"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"></TextView>
+                app:layout_constraintTop_toTopOf="parent"></TextView>
+
             <ImageView
-                android:src="@drawable/ic_coin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="127dp"
-                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/ic_coin"
                 app:layout_constraintStart_toEndOf="@id/tradix"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"></ImageView>
+                app:layout_constraintTop_toTopOf="parent"></ImageView>
+
             <TextView
                 android:id="@+id/textTrading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_light"
+                android:text="The future of trading"
+                android:textColor="#171717"
+                android:textSize="22sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tradix"
-                android:fontFamily="@font/lato_light"
-                android:textSize="22sp"
-                android:textColor="#171717"
-                android:text="The future of trading"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"></TextView>
+                app:layout_constraintTop_toBottomOf="@id/tradix"></TextView>
+
             <ImageView
-                app:layout_constraintStart_toStartOf="parent"
-                android:src="@drawable/ic_pixeltrue_newsletter"
-                app:layout_constraintTop_toBottomOf="@id/textTrading"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"></ImageView>
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_pixeltrue_newsletter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textTrading"></ImageView>
         </androidx.constraintlayout.widget.ConstraintLayout>
+
         <TextView
             android:id="@+id/textsent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:fontFamily="@font/raleway_black"
-            android:textSize="22sp"
-            android:textColor="#656565"
             android:text="We have sent you an"
+            android:textColor="#656565"
+            android:textSize="22sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/layout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"></TextView>
+            app:layout_constraintTop_toBottomOf="@id/layout"></TextView>
+
         <TextView
             android:id="@+id/textemail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:fontFamily="@font/raleway_black"
-            android:textSize="22sp"
-            android:textColor="#656565"
             android:text="email to change your"
+            android:textColor="#656565"
+            android:textSize="22sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textsent"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"></TextView>
+            app:layout_constraintTop_toBottomOf="@id/textsent"></TextView>
+
         <TextView
             android:id="@+id/textpw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:fontFamily="@font/raleway_black"
-            android:textSize="22sp"
-            android:textColor="#656565"
             android:text="password"
+            android:textColor="#656565"
+            android:textSize="22sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textemail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"></TextView>
+            app:layout_constraintTop_toBottomOf="@id/textemail"></TextView>
+
         <TextView
-            android:paddingHorizontal="75dp"
-            android:paddingVertical="17dp"
-            android:gravity="center"
+            android:id="@+id/btnResendEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="62dp"
+            android:layout_marginTop="16dp"
             android:background="@drawable/custom_button"
             android:fontFamily="@font/lato_black"
-            android:textSize="14sp"
-            android:textColor="#ffffff"
+            android:gravity="center"
+            android:paddingHorizontal="75dp"
+            android:paddingVertical="17dp"
             android:text="RESEND EMAIL"
-            android:layout_marginTop="16dp"
-            android:layout_marginHorizontal="62dp"
+            android:textColor="#ffffff"
+            android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:id="@+id/btnResendEmail"
-            app:layout_constraintTop_toBottomOf="@id/textpw"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"></TextView>
+            app:layout_constraintTop_toBottomOf="@id/textpw"></TextView>
+
         <TextView
             android:id="@+id/textCountdown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:fontFamily="@font/lato_light"
-            android:textSize="14sp"
             android:textColor="#3e3e3e"
-            tools:text="Wait 30 seconds before sending it"
+            android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/btnResendEmail"
-            android:layout_marginTop="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"></TextView>
+            tools:text="Wait 30 seconds before sending it"></TextView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>

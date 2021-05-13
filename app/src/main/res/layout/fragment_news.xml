@@ -1,347 +1,378 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <ImageView
-        android:scaleType="centerCrop"
-        android:src="@drawable/ic_componente_6_1"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"></ImageView>
-    <ImageView
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="48dp"
-        android:src="@drawable/icons_8_expand_arrow"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"></ImageView>
-    <TextView
-        android:id="@+id/tvtitle"
-        android:fontFamily="@font/raleway_black"
-        android:textSize="22sp"
-        android:textColor="#121212"
-        android:text="NEWS"
-        android:layout_marginTop="45dp"
-        android:layout_marginLeft="69dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"></TextView>
-    <ImageView
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="50dp"
-        android:src="@drawable/icons_8_menu_vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"></ImageView>
+    android:background="#ffffff">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:background="@drawable/bg_layout_menu"
-        android:layout_marginTop="95dp"
-        app:layout_constraintTop_toTopOf="parent"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <HorizontalScrollView
-            android:id="@+id/layouttop"
-            android:layout_marginTop="23dp"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <LinearLayout
-                android:layout_gravity="center_horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:id="@+id/tvEditrial"
-                    android:layout_marginLeft="35dp"
-                    android:paddingVertical="5dp"
-                    android:paddingHorizontal="8dp"
-                    android:background="@drawable/bg_textview"
-                    android:fontFamily="@font/lato_blackitalic"
-                    android:textSize="12sp"
-                    android:textColor="#222222"
-                    android:text="EDITORIAL"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"></TextView>
-                <TextView
-                    android:id="@+id/tvCrypto"
-                    android:paddingVertical="5dp"
-                    android:paddingHorizontal="8dp"
-                    android:layout_marginHorizontal="17dp"
-                    android:fontFamily="@font/lato_blackitalic"
-                    android:textSize="12sp"
-                    android:textColor="#222222"
-                    android:text="CRYPTO NEWS"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"></TextView>
-                <TextView
-                    android:id="@+id/tvRaw"
-                    android:paddingVertical="5dp"
-                    android:paddingHorizontal="8dp"
-                    android:fontFamily="@font/lato_blackitalic"
-                    android:textSize="12sp"
-                    android:textColor="#222222"
-                    android:text="RAW MATERIAL"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"></TextView>
-                <TextView
-                    android:id="@+id/tvEconomics"
-                    android:paddingVertical="5dp"
-                    android:paddingHorizontal="8dp"
-                    android:layout_marginLeft="17dp"
-                    android:fontFamily="@font/lato_blackitalic"
-                    android:textSize="12sp"
-                    android:textColor="#222222"
-                    android:text="ECONOMICS"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"></TextView>
-            </LinearLayout>
-        </HorizontalScrollView>
+
         <ImageView
-            android:layout_marginHorizontal="25dp"
-            android:id="@+id/imgmain"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/layouttop"
-            android:src="@drawable/main"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"></ImageView>
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_componente_6_1"
+            app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="48dp"
+            android:src="@drawable/icons_8_expand_arrow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+        <TextView
+            android:id="@+id/tvtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="69dp"
+            android:layout_marginTop="45dp"
+            android:fontFamily="@font/raleway_black"
+            android:text="NEWS"
+            android:textColor="#121212"
+            android:textSize="22sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></TextView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="30dp"
+            android:src="@drawable/icons_8_menu_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></ImageView>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:id="@+id/layoutatlantia"
-            android:background="#ffffff"
-            android:layout_marginHorizontal="25dp"
-            app:layout_constraintTop_toBottomOf="@id/imgmain"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="95dp"
+            android:background="@drawable/bg_layout_menu"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <HorizontalScrollView
+                android:id="@+id/layouttop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="23dp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/tvEditrial"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="35dp"
+                        android:background="@drawable/bg_textview"
+                        android:fontFamily="@font/lato_blackitalic"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="5dp"
+                        android:text="EDITORIAL"
+                        android:textColor="#222222"
+                        android:textSize="12sp"></TextView>
+
+                    <TextView
+                        android:id="@+id/tvCrypto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="17dp"
+                        android:fontFamily="@font/lato_blackitalic"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="5dp"
+                        android:text="CRYPTO NEWS"
+                        android:textColor="#222222"
+                        android:textSize="12sp"></TextView>
+
+                    <TextView
+                        android:id="@+id/tvRaw"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lato_blackitalic"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="5dp"
+                        android:text="RAW MATERIAL"
+                        android:textColor="#222222"
+                        android:textSize="12sp"></TextView>
+
+                    <TextView
+                        android:id="@+id/tvEconomics"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
+                        android:fontFamily="@font/lato_blackitalic"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="5dp"
+                        android:text="ECONOMICS"
+                        android:textColor="#222222"
+                        android:textSize="12sp"></TextView>
+                </LinearLayout>
+            </HorizontalScrollView>
+
             <ImageView
-                android:id="@+id/imgatlantia"
-                android:src="@drawable/atlantia"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_width="102dp"
-                android:layout_height="104dp"></ImageView>
-            <TextView
-                android:id="@+id/tvatlantia1"
-                android:layout_marginTop="11dp"
-                android:layout_marginLeft="21dp"
-                android:fontFamily="@font/raleway_medium"
-                android:textSize="10sp"
-                android:textColor="#f00909"
-                android:text="ALT -3,87%"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toEndOf="@id/imgatlantia"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"></TextView>
-            <TextView
-                android:id="@+id/tvatlantia2"
-                android:layout_marginLeft="21dp"
-                android:fontFamily="@font/raleway_black"
-                android:textSize="14sp"
-                android:textColor="#2e2e2e"
-                android:text="ATLANTIA"
-                app:layout_constraintStart_toEndOf="@id/imgatlantia"
-                app:layout_constraintTop_toBottomOf="@id/tvatlantia1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"></TextView>
-            <TextView
-                android:id="@+id/tv"
-                android:fontFamily="@font/lato_light"
-                android:textSize="10sp"
-                android:textColor="#000000"
-                android:text="@string/atlantia"
-                android:layout_marginLeft="21dp"
-                app:layout_constraintStart_toEndOf="@id/imgatlantia"
-                app:layout_constraintTop_toBottomOf="@id/tvatlantia2"
-                android:layout_width="160dp"
-                android:layout_height="wrap_content"></TextView>
-            <TextView
-                android:layout_marginLeft="32dp"
-                android:layout_marginTop="11dp"
-                android:fontFamily="@font/lato_light"
-                android:textSize="10sp"
-                android:textColor="#080808"
-                android:text="3 Sept 2020"
-                app:layout_constraintStart_toEndOf="@id/tvatlantia1"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"></TextView>
-            <ImageView
-                android:layout_marginLeft="26dp"
-                android:layout_marginBottom="6dp"
-                android:layout_marginRight="6dp"
-                app:layout_constraintStart_toEndOf="@id/tv"
+                android:id="@+id/imgmain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="25dp"
+                android:src="@drawable/main"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:src="@drawable/ic_gruppo_di_maschere_1_clipped"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"></ImageView>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-        <ImageView
-            android:id="@+id/imgnotification"
-            app:layout_constraintEnd_toEndOf="@id/layoutatlantia"
-            app:layout_constraintTop_toTopOf="@id/layoutatlantia"
-            android:src="@drawable/alert"
-            android:layout_width="37dp"
-            android:layout_height="37dp"></ImageView>
-        <androidx.constraintlayout.widget.ConstraintLayout
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:id="@+id/layoutxiaomi"
-            android:layout_marginTop="21dp"
-            android:background="#ffffff"
-            android:layout_marginHorizontal="25dp"
-            app:layout_constraintTop_toBottomOf="@id/layoutatlantia"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <ImageView
-                android:id="@+id/imgxiaomi"
-                android:src="@drawable/atlantia"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_width="102dp"
-                android:layout_height="104dp"></ImageView>
-            <TextView
-                android:id="@+id/tvxiaomi1"
-                android:layout_marginTop="11dp"
-                android:layout_marginLeft="21dp"
-                android:fontFamily="@font/raleway_medium"
-                android:textSize="10sp"
-                android:textColor="#f00909"
-                android:text="HKD -2,13%"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toEndOf="@id/imgxiaomi"
+                app:layout_constraintTop_toBottomOf="@id/layouttop"></ImageView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutatlantia"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"></TextView>
-            <TextView
-                android:id="@+id/tvxiaomi2"
-                android:layout_marginLeft="21dp"
-                android:fontFamily="@font/raleway_black"
-                android:textSize="14sp"
-                android:textColor="#2e2e2e"
-                android:text="XIAOMI"
-                app:layout_constraintStart_toEndOf="@id/imgxiaomi"
-                app:layout_constraintTop_toBottomOf="@id/tvxiaomi1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"></TextView>
-            <TextView
-                android:id="@+id/tv1"
-                android:fontFamily="@font/lato_light"
-                android:textSize="10sp"
-                android:textColor="#000000"
-                android:text="@string/atlantia"
-                android:layout_marginLeft="21dp"
-                app:layout_constraintStart_toEndOf="@id/imgxiaomi"
-                app:layout_constraintTop_toBottomOf="@id/tvxiaomi2"
-                android:layout_width="160dp"
-                android:layout_height="wrap_content"></TextView>
-            <TextView
-                android:layout_marginLeft="32dp"
-                android:layout_marginTop="11dp"
-                android:fontFamily="@font/lato_light"
-                android:textSize="10sp"
-                android:textColor="#080808"
-                android:text="2 Sept 2020"
-                app:layout_constraintStart_toEndOf="@id/tvxiaomi1"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"></TextView>
-            <ImageView
-                android:layout_marginLeft="26dp"
-                android:layout_marginBottom="6dp"
-                android:layout_marginRight="6dp"
-                app:layout_constraintStart_toEndOf="@id/tv1"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="25dp"
+                android:background="#ffffff"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:src="@drawable/ic_gruppo_di_maschere_1_clipped"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"></ImageView>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/layoutapple"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="21dp"
-            android:background="#ffffff"
-            android:layout_marginHorizontal="25dp"
-            app:layout_constraintTop_toBottomOf="@id/layoutxiaomi"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <ImageView
-                android:id="@+id/imgapple"
-                android:src="@drawable/atlantia"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_width="102dp"
-                android:layout_height="104dp"></ImageView>
-            <TextView
-                android:id="@+id/tvapple1"
-                android:layout_marginTop="11dp"
-                android:layout_marginLeft="21dp"
-                android:fontFamily="@font/raleway_medium"
-                android:textSize="10sp"
-                android:textColor="#f00909"
-                android:text="AAPL -0,91%"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toEndOf="@id/imgapple"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"></TextView>
-            <TextView
-                android:id="@+id/tvapple2"
-                android:layout_marginLeft="21dp"
-                android:fontFamily="@font/raleway_black"
-                android:textSize="14sp"
-                android:textColor="#2e2e2e"
-                android:text="APPLE"
-                app:layout_constraintStart_toEndOf="@id/imgapple"
-                app:layout_constraintTop_toBottomOf="@id/tvapple1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"></TextView>
-            <TextView
-                android:id="@+id/tv2"
-                android:fontFamily="@font/lato_light"
-                android:textSize="10sp"
-                android:textColor="#000000"
-                android:text="@string/atlantia"
-                android:layout_marginLeft="21dp"
-                app:layout_constraintStart_toEndOf="@id/imgapple"
-                app:layout_constraintTop_toBottomOf="@id/tvapple2"
-                android:layout_width="160dp"
-                android:layout_height="wrap_content"></TextView>
-            <TextView
-                android:layout_marginLeft="32dp"
-                android:layout_marginTop="11dp"
-                android:fontFamily="@font/lato_light"
-                android:textSize="10sp"
-                android:textColor="#080808"
-                android:text="1 Sept 2020"
-                app:layout_constraintStart_toEndOf="@id/tvapple1"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"></TextView>
+                app:layout_constraintTop_toBottomOf="@id/imgmain">
+
+                <ImageView
+                    android:id="@+id/imgatlantia"
+                    android:layout_width="102dp"
+                    android:layout_height="104dp"
+                    android:src="@drawable/atlantia"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+                <TextView
+                    android:id="@+id/tvatlantia1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="21dp"
+                    android:layout_marginTop="11dp"
+                    android:fontFamily="@font/raleway_medium"
+                    android:text="ALT -3,87%"
+                    android:textColor="#f00909"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toEndOf="@id/imgatlantia"
+                    app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                <TextView
+                    android:id="@+id/tvatlantia2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="21dp"
+                    android:fontFamily="@font/raleway_black"
+                    android:text="ATLANTIA"
+                    android:textColor="#2e2e2e"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@id/imgatlantia"
+                    app:layout_constraintTop_toBottomOf="@id/tvatlantia1"></TextView>
+
+                <TextView
+                    android:id="@+id/tv"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="21dp"
+                    android:fontFamily="@font/lato_light"
+                    android:text="@string/atlantia"
+                    android:textColor="#000000"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toEndOf="@id/imgatlantia"
+                    app:layout_constraintTop_toBottomOf="@id/tvatlantia2"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="11dp"
+                    android:fontFamily="@font/lato_light"
+                    android:text="3 Sept 2020"
+                    android:textColor="#080808"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toEndOf="@id/tvatlantia1"
+                    app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="26dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:src="@drawable/ic_gruppo_di_maschere_1_clipped"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tv"></ImageView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
             <ImageView
-                android:layout_marginLeft="26dp"
-                android:layout_marginBottom="6dp"
-                android:layout_marginRight="6dp"
-                app:layout_constraintStart_toEndOf="@id/tv2"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:src="@drawable/ic_gruppo_di_maschere_1_clipped"
+                android:id="@+id/imgnotification"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:src="@drawable/alert"
+                app:layout_constraintEnd_toEndOf="@id/layoutatlantia"
+                app:layout_constraintTop_toTopOf="@id/layoutatlantia"></ImageView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutxiaomi"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"></ImageView>
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="21dp"
+                android:background="#ffffff"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutatlantia">
+
+                <ImageView
+                    android:id="@+id/imgxiaomi"
+                    android:layout_width="102dp"
+                    android:layout_height="104dp"
+                    android:src="@drawable/atlantia"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+                <TextView
+                    android:id="@+id/tvxiaomi1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="21dp"
+                    android:layout_marginTop="11dp"
+                    android:fontFamily="@font/raleway_medium"
+                    android:text="HKD -2,13%"
+                    android:textColor="#f00909"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toEndOf="@id/imgxiaomi"
+                    app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                <TextView
+                    android:id="@+id/tvxiaomi2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="21dp"
+                    android:fontFamily="@font/raleway_black"
+                    android:text="XIAOMI"
+                    android:textColor="#2e2e2e"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@id/imgxiaomi"
+                    app:layout_constraintTop_toBottomOf="@id/tvxiaomi1"></TextView>
+
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="21dp"
+                    android:fontFamily="@font/lato_light"
+                    android:text="@string/atlantia"
+                    android:textColor="#000000"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toEndOf="@id/imgxiaomi"
+                    app:layout_constraintTop_toBottomOf="@id/tvxiaomi2"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="11dp"
+                    android:fontFamily="@font/lato_light"
+                    android:text="2 Sept 2020"
+                    android:textColor="#080808"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toEndOf="@id/tvxiaomi1"
+                    app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="26dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:src="@drawable/ic_gruppo_di_maschere_1_clipped"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tv1"></ImageView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutapple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="21dp"
+                android:background="#ffffff"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutxiaomi">
+
+                <ImageView
+                    android:id="@+id/imgapple"
+                    android:layout_width="102dp"
+                    android:layout_height="104dp"
+                    android:src="@drawable/atlantia"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+                <TextView
+                    android:id="@+id/tvapple1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="21dp"
+                    android:layout_marginTop="11dp"
+                    android:fontFamily="@font/raleway_medium"
+                    android:text="AAPL -0,91%"
+                    android:textColor="#f00909"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toEndOf="@id/imgapple"
+                    app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                <TextView
+                    android:id="@+id/tvapple2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="21dp"
+                    android:fontFamily="@font/raleway_black"
+                    android:text="APPLE"
+                    android:textColor="#2e2e2e"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@id/imgapple"
+                    app:layout_constraintTop_toBottomOf="@id/tvapple1"></TextView>
+
+                <TextView
+                    android:id="@+id/tv2"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="21dp"
+                    android:fontFamily="@font/lato_light"
+                    android:text="@string/atlantia"
+                    android:textColor="#000000"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toEndOf="@id/imgapple"
+                    app:layout_constraintTop_toBottomOf="@id/tvapple2"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="11dp"
+                    android:fontFamily="@font/lato_light"
+                    android:text="1 Sept 2020"
+                    android:textColor="#080808"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toEndOf="@id/tvapple1"
+                    app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="26dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:src="@drawable/ic_gruppo_di_maschere_1_clipped"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tv2"></ImageView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>

@@ -13,7 +13,7 @@ class ViewPagerAdapter(fm: FragmentManager, behavior: Int) :
     }
 
     override fun getItem(position: Int): Fragment {
-        when(position) {
+        when (position) {
             0 -> {
                 return HomeFragment()
             }

@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:paddingBottom="50dp"
     android:layout_gravity="center_horizontal"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:paddingBottom="50dp">
 
     <ImageView
-        android:adjustViewBounds="true"
-        app:layout_constraintTop_toTopOf="@id/imgOnboarding3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="27dp"
+        android:adjustViewBounds="true"
         android:src="@drawable/componente_5_2"
         app:layout_constraintStart_toStartOf="@id/imgOnboarding3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"></ImageView>
+        app:layout_constraintTop_toTopOf="@id/imgOnboarding3"></ImageView>
 
     <ImageView
         android:id="@+id/imgOnboarding3"
@@ -26,33 +26,36 @@
         app:layout_constraintTop_toTopOf="parent"></ImageView>
 
     <LinearLayout
-        android:orientation="vertical"
-        android:layout_marginTop="56dp"
-        android:layout_marginLeft="45dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imgOnboarding3"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="56dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgOnboarding3">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/raleway_black"
-            android:textSize="28sp"
+            android:text="Keep your"
             android:textColor="#3e3e3e"
-            android:text="Keep your" />
+            android:textSize="28sp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/raleway_black"
-            android:textSize="28sp"
+            android:text="investment safe"
             android:textColor="#3e3e3e"
-            android:text="investment safe" />
+            android:textSize="28sp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/lato_light"
-            android:textSize="14sp"
+            android:text="Ex totam praesentium incidunt aut."
             android:textColor="#000000"
-            android:text="Ex totam praesentium incidunt aut."/>
+            android:textSize="14sp" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

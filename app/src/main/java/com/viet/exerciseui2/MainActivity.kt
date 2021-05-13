@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity(), OnFragmentManager {
     var indicator_active: Drawable? = null
     var indicator_inactive: Drawable? = null
     var stack = Stack<Int>()
-    lateinit var viewPagerAdapter : ViewPagerAdapter
+    lateinit var viewPagerAdapter: ViewPagerAdapter
     var fragmentManager: FragmentManager = supportFragmentManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,10 +32,14 @@ class MainActivity : AppCompatActivity(), OnFragmentManager {
 
         stack.push(0)
         indicator_active = ContextCompat.getDrawable(this, R.drawable.bg_item_bottom_navigation)
-        indicator_inactive = ContextCompat.getDrawable(this, R.drawable.bg_item_bottom_navigation_notcheck)
+        indicator_inactive =
+            ContextCompat.getDrawable(this, R.drawable.bg_item_bottom_navigation_notcheck)
 
         viewPagerAdapter =
-            ViewPagerAdapter(supportFragmentManager, FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT)
+            ViewPagerAdapter(
+                supportFragmentManager,
+                FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT
+            )
         viewPager.adapter = viewPagerAdapter
         btnHome.setOnClickListener {
             viewPager.currentItem = 0
@@ -54,7 +58,7 @@ class MainActivity : AppCompatActivity(), OnFragmentManager {
             selectionBottomNavigation(3)
         }
 
-        viewPager.addOnPageChangeListener(object : ViewPager.OnPageChangeListener{
+        viewPager.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
             override fun onPageScrolled(
                 position: Int,
                 positionOffset: Float,
@@ -63,39 +67,39 @@ class MainActivity : AppCompatActivity(), OnFragmentManager {
             }
 
             override fun onPageSelected(position: Int) {
-                when(position){
-                    0-> {
+                when (position) {
+                    0 -> {
                         selectionBottomNavigation(0)
-                        if(stack.search(0) == -1)
+                        if (stack.search(0) == -1)
                             stack.push(0)
-                        else{
+                        else {
                             stack = filterStack(stack, stack.search(0))
                             stack.push(0)
                         }
                     }
-                    1-> {
+                    1 -> {
                         selectionBottomNavigation(1)
-                        if(stack.search(1) == -1)
+                        if (stack.search(1) == -1)
                             stack.push(1)
-                        else{
+                        else {
                             stack = filterStack(stack, stack.search(1))
                             stack.push(1)
                         }
                     }
-                    2->{
+                    2 -> {
                         selectionBottomNavigation(2)
-                        if(stack.search(2) == -1)
+                        if (stack.search(2) == -1)
                             stack.push(2)
-                        else{
+                        else {
                             stack = filterStack(stack, stack.search(2))
                             stack.push(2)
                         }
                     }
-                    3->{
+                    3 -> {
                         selectionBottomNavigation(3)
-                        if(stack.search(3) == -1)
+                        if (stack.search(3) == -1)
                             stack.push(3)
-                        else{
+                        else {
                             stack = filterStack(stack, stack.search(3))
                             stack.push(3)
                         }
@@ -109,10 +113,11 @@ class MainActivity : AppCompatActivity(), OnFragmentManager {
         })
 
     }
-    fun selectionBottomNavigation(i : Int){
+
+    fun selectionBottomNavigation(i: Int) {
         frame_new_article.visibility = View.INVISIBLE
-        when(i){
-            0->{
+        when (i) {
+            0 -> {
                 imgHome.setImageResource(R.drawable.icons_8_increase)
                 imgHome.background = indicator_active
                 imgCoin.setImageResource(R.drawable.icons_8_chart)
@@ -122,7 +127,7 @@ class MainActivity : AppCompatActivity(), OnFragmentManager {
                 imgMenu.setImageResource(R.drawable.icons_8_customer)
                 imgMenu.background = indicator_inactive
             }
-            1->{
+            1 -> {
                 imgHome.setImageResource(R.drawable.icons_8_increase_2)
                 imgHome.background = indicator_inactive
                 imgCoin.setImageResource(R.drawable.icons_8_chart_2)
@@ -132,7 +137,7 @@ class MainActivity : AppCompatActivity(), OnFragmentManager {
                 imgMenu.setImageResource(R.drawable.icons_8_customer)
                 imgMenu.background = indicator_inactive
             }
-            2->{
+            2 -> {
                 imgHome.setImageResource(R.drawable.icons_8_increase_2)
                 imgHome.background = indicator_inactive
                 imgCoin.setImageResource(R.drawable.icons_8_chart)
@@ -142,7 +147,7 @@ class MainActivity : AppCompatActivity(), OnFragmentManager {
                 imgMenu.setImageResource(R.drawable.icons_8_customer)
                 imgMenu.background = indicator_inactive
             }
-            3->{
+            3 -> {
                 imgHome.setImageResource(R.drawable.icons_8_increase_2)
                 imgHome.background = indicator_inactive
                 imgCoin.setImageResource(R.drawable.icons_8_chart)
@@ -156,26 +161,25 @@ class MainActivity : AppCompatActivity(), OnFragmentManager {
     }
 
     override fun onBackPressed() {
-        if(frame_new_article.visibility == View.VISIBLE){
+        if (frame_new_article.visibility == View.VISIBLE) {
             frame_new_article.visibility = View.INVISIBLE
-        }
-        else if(stack.pop() != 0){
+        } else if (stack.pop() != 0) {
             var i = stack.pop()
             viewPager.currentItem = i
-        }else{
+        } else {
             super.onBackPressed()
         }
     }
 
-    fun filterStack(s : Stack<Int>, p : Int) : Stack<Int> {
-        var stack2 : Stack<Int> = Stack<Int>()
-        for (i in 0 until s.size){
-            if(i == p - 1) s.pop()
-            else{
+    fun filterStack(s: Stack<Int>, p: Int): Stack<Int> {
+        var stack2: Stack<Int> = Stack<Int>()
+        for (i in 0 until s.size) {
+            if (i == p - 1) s.pop()
+            else {
                 stack2.push(s.pop())
             }
         }
-        for (i in 0 until stack2.size){
+        for (i in 0 until stack2.size) {
             s.push(stack2.pop())
         }
         return s

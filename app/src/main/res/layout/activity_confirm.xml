@@ -5,110 +5,141 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ConfirmActivity">
+
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_marginBottom="50dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp">
+
         <ImageView
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:scaleType="centerCrop"
             android:src="@drawable/ic_componente_6_7"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"></ImageView>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></ImageView>
+
         <TextView
             android:id="@+id/tradix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="80dp"
-            app:layout_constraintTop_toTopOf="parent"
             android:layout_marginRight="30dp"
+            android:fontFamily="@font/raleway_black"
+            android:text="TRADIX"
+            android:textColor="#2b2828"
+            android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:fontFamily="@font/raleway_black"
-            android:textSize="24sp"
-            android:textColor="#2b2828"
-            android:text="TRADIX"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"></TextView>
+            app:layout_constraintTop_toTopOf="parent"></TextView>
+
         <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="87dp"
-            app:layout_constraintStart_toEndOf="@id/tradix"
-            app:layout_constraintTop_toTopOf="parent"
             android:src="@drawable/ic_coin"
-            android:layout_width="20dp"
-            android:layout_height="20dp"></ImageView>
+            app:layout_constraintStart_toEndOf="@id/tradix"
+            app:layout_constraintTop_toTopOf="parent"></ImageView>
+
         <TextView
             android:id="@+id/textshow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="45dp"
             android:fontFamily="@font/raleway_black"
-            android:textSize="20sp"
+            android:text="Yay! Your password has been"
             android:textColor="#656565"
-            tools:text="Yay! Your password has been"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tradix"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"></TextView>
+            app:layout_constraintTop_toBottomOf="@id/tradix"></TextView>
+
         <TextView
             android:id="@+id/textshow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:fontFamily="@font/raleway_black"
-            android:textSize="20sp"
+            android:text="changed!"
             android:textColor="#656565"
-            tools:text="changed!"
-            app:layout_constraintTop_toBottomOf="@id/textshow"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"></TextView>
+            app:layout_constraintTop_toBottomOf="@id/textshow"></TextView>
+
         <TextView
             android:id="@+id/textshow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/lato_light"
-            android:textSize="14sp"
+            android:text="You can now log into your account"
             android:textColor="#000000"
-            tools:text="You can now log into your account"
-            app:layout_constraintTop_toBottomOf="@id/textshow2"
+            android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"></TextView>
+            app:layout_constraintTop_toBottomOf="@id/textshow2"></TextView>
+
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:fontFamily="@font/lato_light"
-            android:textSize="14sp"
+            android:text="with the new password"
             android:textColor="#000000"
-            tools:text="with the new password"
-            app:layout_constraintTop_toBottomOf="@id/textshow3"
+            android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"></TextView>
+            app:layout_constraintTop_toBottomOf="@id/textshow3"></TextView>
+
         <ImageView
-            android:scaleType="fitEnd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_marginBottom="80dp"
-            app:layout_constraintBottom_toBottomOf="@id/imgpixe"
-            app:layout_constraintTop_toTopOf="@id/imgpixe"
-            app:layout_constraintEnd_toEndOf="@id/imgpixe"
+            android:scaleType="center"
             android:src="@drawable/ic_componente_4_3"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"></ImageView>
+            app:layout_constraintBottom_toBottomOf="@id/imgpixe"
+            app:layout_constraintEnd_toEndOf="@id/imgpixe"
+            app:layout_constraintTop_toTopOf="@id/imgpixe"></ImageView>
+
         <ImageView
             android:id="@+id/imgpixe"
-            android:src="@drawable/ic_pixeltrue_special_deals"
-            app:layout_constraintTop_toBottomOf="@id/textshow2"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"></ImageView>
-        <TextView
-            android:paddingVertical="16dp"
-            android:paddingHorizontal="100dp"
-            android:background="@drawable/custom_button_login"
-            android:fontFamily="@font/lato_black"
-            android:textSize="14sp"
-            android:text="LOGIN"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_pixeltrue_special_deals"
+            app:layout_constraintTop_toBottomOf="@id/textshow2"></ImageView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
+            android:layout_marginRight="230dp"
+            android:src="@drawable/ic_flying_coins"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/imgpixe"
+            app:layout_constraintTop_toTopOf="@id/imgpixe"></ImageView>
+
+        <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"></TextView>
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="230dp"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/ic_flying_coins_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/imgpixe"></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/custom_button_login"
+            android:fontFamily="@font/lato_black"
+            android:paddingHorizontal="100dp"
+            android:paddingVertical="16dp"
+            android:text="LOGIN"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgpixe"></TextView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

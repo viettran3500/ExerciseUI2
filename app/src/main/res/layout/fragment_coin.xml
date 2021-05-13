@@ -1,332 +1,373 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:background="#ffffff">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layouttop"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginRight="30dp"
+            android:layout_width="315dp"
+            android:layout_height="49dp"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="45dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_marginRight="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
             <ImageView
                 android:id="@+id/img_icons_8_expand_arrow"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:layout_marginTop="6dp"
                 android:src="@drawable/icons_8_expand_arrow"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_width="20dp"
-                android:layout_height="20dp"></ImageView>
+                app:layout_constraintTop_toTopOf="parent"></ImageView>
+
             <TextView
                 android:id="@+id/tvneo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
                 android:fontFamily="@font/raleway_black"
-                android:textSize="22sp"
-                android:textColor="#1d1d1d"
                 android:text="NEO INDEX"
+                android:textColor="#1d1d1d"
+                android:textSize="22sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"></TextView>
+                app:layout_constraintTop_toTopOf="parent"></TextView>
+
             <TextView
                 android:id="@+id/tvusd"
-                android:fontFamily="@font/raleway_medium"
-                android:textSize="12sp"
-                android:textColor="#000000"
-                android:text="USD"
-                android:layout_marginTop="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvneo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"></TextView>
-            <TextView
-                android:layout_marginTop="3dp"
-                android:layout_marginLeft="20dp"
+                android:layout_marginTop="4dp"
                 android:fontFamily="@font/raleway_medium"
-                android:textSize="13sp"
+                android:text="USD"
                 android:textColor="#000000"
-                android:text="Binance"
-                app:layout_constraintStart_toEndOf="@id/tvusd"
-                app:layout_constraintTop_toBottomOf="@id/tvneo"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvneo"></TextView>
+
+            <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"></TextView>
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="3dp"
+                android:fontFamily="@font/raleway_medium"
+                android:text="Binance"
+                android:textColor="#000000"
+                android:textSize="13sp"
+                app:layout_constraintStart_toEndOf="@id/tvusd"
+                app:layout_constraintTop_toBottomOf="@id/tvneo"></TextView>
+
             <ImageView
                 android:id="@+id/imgiconmenu"
-                android:layout_marginRight="5dp"
-                android:layout_marginTop="15dp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:src="@drawable/icons_8_menu_vertical"
                 android:layout_width="18dp"
-                android:layout_height="18dp"></ImageView>
+                android:layout_height="18dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/icons_8_menu_vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></ImageView>
+
             <ImageView
-                android:layout_marginTop="5dp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/imgiconmenu"
                 android:id="@+id/imgnotification"
-                android:padding="8dp"
-                android:background="@drawable/bg_fab"
-                android:layout_marginRight="19dp"
-                android:src="@drawable/icons_8_alarm"
                 android:layout_width="37dp"
-                android:layout_height="37dp"/>
+                android:layout_height="37dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="19dp"
+                android:background="@drawable/bg_fab"
+                android:padding="8dp"
+                android:src="@drawable/icons_8_alarm"
+                app:layout_constraintEnd_toStartOf="@id/imgiconmenu"
+                app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layoutsecond"
-            android:paddingHorizontal="19dp"
-            android:paddingVertical="18dp"
-            android:background="@drawable/bg_layout_coin"
+            android:layout_width="322dp"
+            android:layout_height="85dp"
             android:layout_marginHorizontal="27dp"
             android:layout_marginTop="25dp"
+            android:background="@drawable/bg_layout_coin"
+            android:paddingHorizontal="19dp"
+            android:paddingVertical="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/layouttop"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            app:layout_constraintTop_toBottomOf="@id/layouttop">
+
             <ImageView
                 android:id="@+id/iconarrowup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icons_8_long_arrow_up"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:src="@drawable/icons_8_long_arrow_up"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"></ImageView>
+                app:layout_constraintTop_toTopOf="parent"></ImageView>
+
             <TextView
-                android:layout_marginLeft="7dp"
                 android:id="@+id/tvrate"
-                android:fontFamily="@font/lato_light"
-                android:textSize="10sp"
-                android:textColor="#bcbcbc"
-                android:text="RATE"
-                app:layout_constraintStart_toEndOf="@id/iconarrowup"
-                app:layout_constraintTop_toTopOf="parent"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"></TextView>
-            <TextView
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="7dp"
-                android:id="@+id/tvnum"
-                android:fontFamily="@font/raleway_black"
-                android:textSize="22sp"
-                android:textColor="#ffffff"
-                android:text="21,1637"
+                android:fontFamily="@font/lato_light"
+                android:text="RATE"
+                android:textColor="#bcbcbc"
+                android:textSize="10sp"
                 app:layout_constraintStart_toEndOf="@id/iconarrowup"
-                app:layout_constraintTop_toBottomOf="@id/tvrate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"></TextView>
+                app:layout_constraintTop_toTopOf="parent"></TextView>
+
             <TextView
+                android:id="@+id/tvnum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:fontFamily="@font/raleway_black"
+                android:text="21,1637"
+                android:textColor="#ffffff"
+                android:textSize="22sp"
+                app:layout_constraintStart_toEndOf="@id/iconarrowup"
+                app:layout_constraintTop_toBottomOf="@id/tvrate"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/raleway_black"
-                android:textSize="12sp"
-                android:textColor="#ffffff"
                 android:text="USD"
+                android:textColor="#ffffff"
+                android:textSize="12sp"
                 app:layout_constraintStart_toEndOf="@id/tvnum"
-                app:layout_constraintTop_toBottomOf="@id/tvrate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"></TextView>
+                app:layout_constraintTop_toBottomOf="@id/tvrate"></TextView>
+
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="7dp"
                 android:fontFamily="@font/raleway_medium"
-                android:textSize="10sp"
-                android:textColor="#ffffff"
                 android:text="17:00:33 Real time"
-                app:layout_constraintStart_toEndOf="@id/iconarrowup"
-                app:layout_constraintTop_toBottomOf="@id/tvnum"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"></TextView>
-            <TextView
-                android:layout_marginTop="2dp"
-                android:id="@+id/tvtoday"
-                android:fontFamily="@font/lato_light"
+                android:textColor="#ffffff"
                 android:textSize="10sp"
-                android:textColor="#bcbcbc"
-                android:text="TODAY CHANGE"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"></TextView>
+                app:layout_constraintStart_toEndOf="@id/iconarrowup"
+                app:layout_constraintTop_toBottomOf="@id/tvnum"></TextView>
+
             <TextView
+                android:id="@+id/tvtoday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/lato_light"
+                android:text="TODAY CHANGE"
+                android:textColor="#bcbcbc"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
                 android:fontFamily="@font/raleway_medium"
-                android:textStyle="bold"
-                android:textSize="14sp"
-                android:textColor="#ffffff"
                 android:text="+2,0634 (+9,44%)"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvtoday"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"></TextView>
+                app:layout_constraintTop_toBottomOf="@id/tvtoday"></TextView>
         </androidx.constraintlayout.widget.ConstraintLayout>
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layoutthird"
+            android:layout_width="301dp"
+            android:layout_height="wrap_content"
             android:layout_marginHorizontal="37dp"
             android:layout_marginTop="23dp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/layoutsecond"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            app:layout_constraintTop_toBottomOf="@id/layoutsecond">
+
             <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
                 android:src="@drawable/image"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"></ImageView>
+                app:layout_constraintTop_toTopOf="parent"></ImageView>
+
             <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
                 android:src="@drawable/image2"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"></ImageView>
+                app:layout_constraintTop_toTopOf="parent"></ImageView>
+
             <TextView
-                android:paddingHorizontal="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:background="@drawable/bg_textview"
                 android:fontFamily="@font/raleway_medium"
-                android:textStyle="normal"
-                android:textSize="14sp"
-                android:textColor="#222222"
+                android:paddingHorizontal="16dp"
                 android:text="NEO Chart"
-                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="#222222"
+                android:textSize="14sp"
+                android:textStyle="normal"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"></TextView>
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></TextView>
         </androidx.constraintlayout.widget.ConstraintLayout>
+
         <ImageView
             android:id="@+id/img_7_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:scaleType="centerCrop"
+            android:scaleType="center"
+            android:src="@drawable/ic_componente_7_4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/layoutsecond"
-            android:src="@drawable/ic_componente_7_4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"></ImageView>
+            app:layout_constraintTop_toTopOf="@id/layoutsecond"></ImageView>
+
         <ImageView
             android:id="@+id/imgneo"
+            android:layout_width="330dp"
+            android:layout_height="200dp"
             android:layout_marginTop="50dp"
-            app:layout_constraintBottom_toBottomOf="@id/img_7_4"
             android:paddingHorizontal="20dp"
             android:scaleType="centerInside"
-            app:layout_constraintStart_toStartOf="@id/img_7_4"
-            app:layout_constraintTop_toTopOf="@id/img_7_4"
             android:src="@drawable/neo_chart"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"></ImageView>
+            app:layout_constraintBottom_toBottomOf="@id/img_7_4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/img_7_4"
+            app:layout_constraintTop_toTopOf="@id/img_7_4"></ImageView>
+
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:background="@drawable/bg_layout_menu"
             android:paddingBottom="50dp"
-            app:layout_constraintTop_toBottomOf="@id/imgneo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            app:layout_constraintTop_toBottomOf="@id/imgneo">
+
             <HorizontalScrollView
                 android:id="@+id/layout"
-                app:layout_constraintTop_toTopOf="parent"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent">
+
                 <LinearLayout
-                    android:gravity="center"
-                    android:paddingTop="25dp"
-                    android:paddingHorizontal="40dp"
-                    android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="40dp"
+                    android:paddingTop="25dp">
+
                     <TextView
+                        android:id="@+id/tvGeneral"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/raleway_medium"
                         android:paddingHorizontal="8dp"
                         android:paddingVertical="5dp"
-                        android:id="@+id/tvGeneral"
-                        android:fontFamily="@font/raleway_medium"
-                        android:textSize="12sp"
-                        android:textColor="#222222"
                         android:text="General"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"></TextView>
+                        android:textColor="#222222"
+                        android:textSize="12sp"></TextView>
+
                     <TextView
                         android:id="@+id/tvTechnical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_marginLeft="35dp"
-                        android:paddingHorizontal="8dp"
-                        android:paddingVertical="5dp"
                         android:background="@drawable/bg_button_loadmore"
                         android:fontFamily="@font/raleway_medium"
-                        android:textSize="12sp"
-                        android:textColor="#ffffff"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="5dp"
                         android:text="Technical Section"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"></TextView>
+                        android:textColor="#ffffff"
+                        android:textSize="12sp"></TextView>
+
                     <TextView
-                        android:paddingHorizontal="8dp"
-                        android:paddingVertical="5dp"
                         android:id="@+id/tvMarkets"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_marginLeft="35dp"
                         android:fontFamily="@font/raleway_medium"
-                        android:textSize="12sp"
-                        android:textColor="#222222"
-                        android:text="Markets"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"></TextView>
-                    <TextView
                         android:paddingHorizontal="8dp"
                         android:paddingVertical="5dp"
+                        android:text="Markets"
+                        android:textColor="#222222"
+                        android:textSize="12sp"></TextView>
+
+                    <TextView
                         android:id="@+id/tvCharts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_marginLeft="35dp"
                         android:fontFamily="@font/raleway_medium"
-                        android:textSize="12sp"
-                        android:textColor="#222222"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="5dp"
                         android:text="Charts"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"></TextView>
+                        android:textColor="#222222"
+                        android:textSize="12sp"></TextView>
                 </LinearLayout>
             </HorizontalScrollView>
+
             <LinearLayout
-                android:gravity="center_horizontal"
-                android:layout_marginTop="45dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/layout"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="45dp"
+                android:gravity="center_horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout">
+
                 <LinearLayout
-                    android:gravity="center_horizontal"
-                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginRight="60dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
                     <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:fontFamily="@font/raleway_medium"
-                        android:textSize="10sp"
-                        android:textColor="#222222"
                         android:text="Buy or Sell for NEO"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"></TextView>
-                    <ImageView
-                        android:layout_marginTop="14dp"
-                        android:src="@drawable/ic_raggruppa_38"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"></ImageView>
-                </LinearLayout>
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:fontFamily="@font/raleway_medium"
-                        android:textSize="10sp"
                         android:textColor="#222222"
-                        android:text="Mkt Capitalization"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"></TextView>
+                        android:textSize="10sp"></TextView>
+
                     <ImageView
-                        android:layout_marginTop="14dp"
-                        android:src="@drawable/ic_raggruppa_60"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"></ImageView>
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:src="@drawable/ic_raggruppa_38"></ImageView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/raleway_medium"
+                        android:text="Mkt Capitalization"
+                        android:textColor="#222222"
+                        android:textSize="10sp"></TextView>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:src="@drawable/ic_raggruppa_60"></ImageView>
                 </LinearLayout>
             </LinearLayout>
 

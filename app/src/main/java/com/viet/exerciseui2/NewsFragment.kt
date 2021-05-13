@@ -13,11 +13,11 @@ import java.lang.RuntimeException
 
 class NewsFragment : Fragment() {
 
-    lateinit var listener : OnFragmentManager
+    lateinit var listener: OnFragmentManager
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        if (context is OnFragmentManager ){
-            listener  = context as OnFragmentManager
+        if (context is OnFragmentManager) {
+            listener = context as OnFragmentManager
         } else {
             throw RuntimeException(context.toString() + " must implement onViewSelected");
         }
@@ -28,7 +28,7 @@ class NewsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        var view : View = inflater.inflate(R.layout.fragment_news, container, false)
+        var view: View = inflater.inflate(R.layout.fragment_news, container, false)
         view.layoutatlantia.setOnClickListener {
             listener.onDataSelected("ALANTIA")
         }
