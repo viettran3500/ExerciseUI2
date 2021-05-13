@@ -1,10 +1,12 @@
-package com.viet.exerciseui2
+package com.viet.exerciseui2.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.viet.exerciseui2.model.Home
+import com.viet.exerciseui2.R
 
 class HomeAdapter(var arrayListHome: ArrayList<Home>) :
     RecyclerView.Adapter<HomeAdapter.ViewHolder>() {

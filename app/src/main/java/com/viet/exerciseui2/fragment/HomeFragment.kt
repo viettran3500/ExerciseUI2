@@ -1,5 +1,6 @@
-package com.viet.exerciseui2
+package com.viet.exerciseui2.fragment
 
+import android.content.DialogInterface
 import android.graphics.Color
 import android.graphics.drawable.Drawable
 import android.os.Bundle
@@ -7,10 +8,13 @@ import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.*
-import kotlinx.android.synthetic.main.fragment_home.*
+import com.viet.exerciseui2.model.Home
+import com.viet.exerciseui2.R
+import com.viet.exerciseui2.adapter.HomeAdapter
 import kotlinx.android.synthetic.main.fragment_home.view.*
 
 class HomeFragment : Fragment() {
@@ -24,11 +28,16 @@ class HomeFragment : Fragment() {
     var indicator_active: Drawable? = null
     var indicator_inactive: Drawable? = null
 
+    lateinit var dialog: AlertDialog.Builder
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+        dialog = AlertDialog.Builder(this.context!!)
+
         var itemTouchHelperCallback =
             object : ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.RIGHT) {
                 override fun onMove(
@@ -40,8 +49,18 @@ class HomeFragment : Fragment() {
                 }
 
                 override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
-                    arrayListHome.removeAt(viewHolder.adapterPosition)
-                    adapterHome.notifyDataSetChanged()
+
+                    dialog.setTitle("Notification")
+                    dialog.setMessage("Do you agree to delete the item?")
+                    dialog.setPositiveButton("Yes", DialogInterface.OnClickListener { dialogInterface, i ->
+                        arrayListHome.removeAt(viewHolder.adapterPosition)
+                        adapterHome.notifyDataSetChanged()
+                    })
+                    dialog.setNegativeButton("No", DialogInterface.OnClickListener { dialogInterface, i ->
+                        adapterHome.notifyDataSetChanged()
+                    })
+                    dialog.show()
+
                 }
 
             }

@@ -1,23 +1,18 @@
-package com.viet.exerciseui2
+package com.viet.exerciseui2.activity
 
-import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.graphics.drawable.Drawable
-import android.opengl.Visibility
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import android.widget.Toast
 import androidx.core.content.ContextCompat
-import androidx.core.content.res.ResourcesCompat
-import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentPagerAdapter
 import androidx.fragment.app.FragmentTransaction
-import androidx.viewpager.widget.PagerAdapter
-import androidx.viewpager.widget.ViewPager
+import com.viet.exerciseui2.fragment.Onboarding1
+import com.viet.exerciseui2.fragment.Onboarding2
+import com.viet.exerciseui2.fragment.Onboarding3
+import com.viet.exerciseui2.R
 import kotlinx.android.synthetic.main.activity_onboarding.*
 
 class OnboardingActivity : AppCompatActivity() {
@@ -30,14 +25,14 @@ class OnboardingActivity : AppCompatActivity() {
     var indicator_inactive: Drawable? = null
     var fragmentManager: FragmentManager = supportFragmentManager
     val PREFS_NAME = "MyPrefsFile"
+    lateinit var settings: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        var settings = getSharedPreferences(PREFS_NAME, 0)
+        settings = getSharedPreferences(PREFS_NAME, 0)
         if (!settings.getBoolean("my_first_time", true)) {
             launchHomeScreen()
         } else {
-            settings.edit().putBoolean("my_first_time", false).commit();
         }
         setContentView(R.layout.activity_onboarding)
 
@@ -108,6 +103,7 @@ class OnboardingActivity : AppCompatActivity() {
     }
 
     fun launchHomeScreen() {
+        settings.edit().putBoolean("my_first_time", false).commit();
         val intent = Intent(this, LoginActivity::class.java)
         startActivity(intent)
         finish()

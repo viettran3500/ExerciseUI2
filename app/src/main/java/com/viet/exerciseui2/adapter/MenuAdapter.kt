@@ -1,9 +1,12 @@
-package com.viet.exerciseui2
+package com.viet.exerciseui2.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.viet.exerciseui2.model.ListMenuOne
+import com.viet.exerciseui2.model.ListMenuTwo
+import com.viet.exerciseui2.R
 import kotlinx.android.synthetic.main.item_rcv_one.view.*
 import kotlinx.android.synthetic.main.item_rcv_two.view.*
 

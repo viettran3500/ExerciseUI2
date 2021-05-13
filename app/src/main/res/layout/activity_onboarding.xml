@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OnboardingActivity">
+    android:background="#ffffff"
+    tools:context=".activity.OnboardingActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,7 +22,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="40dp"
                 android:layout_weight="1"
                 android:src="@drawable/icons_8_expand_arrow"
                 android:visibility="invisible"

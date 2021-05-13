@@ -1,9 +1,12 @@
-package com.viet.exerciseui2
+package com.viet.exerciseui2.adapter
 
-import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
+import com.viet.exerciseui2.fragment.CoinFragment
+import com.viet.exerciseui2.fragment.HomeFragment
+import com.viet.exerciseui2.fragment.MenuFragment
+import com.viet.exerciseui2.fragment.NewsFragment
 
 class ViewPagerAdapter(fm: FragmentManager, behavior: Int) :
     FragmentStatePagerAdapter(fm, behavior) {

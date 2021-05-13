@@ -1,11 +1,14 @@
-package com.viet.exerciseui2
+package com.viet.exerciseui2.activity
 
 import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
+import com.viet.exerciseui2.*
+import com.viet.exerciseui2.model.Account
+import com.viet.exerciseui2.utils.REQUEST_CODE_SING_UP
+import com.viet.exerciseui2.utils.checkAccount
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
@@ -41,6 +44,7 @@ class LoginActivity : AppCompatActivity() {
             } else {
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
+                finish()
             }
         }
     }

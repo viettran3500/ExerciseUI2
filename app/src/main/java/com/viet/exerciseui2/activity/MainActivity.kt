@@ -1,22 +1,22 @@
-package com.viet.exerciseui2
+package com.viet.exerciseui2.activity
 
+import android.content.DialogInterface
 import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.view.MotionEvent
 import android.view.View
-import android.view.ViewGroup
+import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
-import androidx.core.view.isVisible
-import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
 import androidx.fragment.app.FragmentTransaction
 import androidx.viewpager.widget.ViewPager
+import com.viet.exerciseui2.fragment.NewsArticleFragment
+import com.viet.exerciseui2.utils.OnFragmentManager
+import com.viet.exerciseui2.R
+import com.viet.exerciseui2.adapter.ViewPagerAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
-import kotlin.collections.HashSet
 
 class MainActivity : AppCompatActivity(), OnFragmentManager {
 
@@ -25,10 +25,13 @@ class MainActivity : AppCompatActivity(), OnFragmentManager {
     var stack = Stack<Int>()
     lateinit var viewPagerAdapter: ViewPagerAdapter
     var fragmentManager: FragmentManager = supportFragmentManager
+    lateinit var dialog: AlertDialog.Builder
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        dialog = AlertDialog.Builder(this)
 
         stack.push(0)
         indicator_active = ContextCompat.getDrawable(this, R.drawable.bg_item_bottom_navigation)
@@ -160,6 +163,7 @@ class MainActivity : AppCompatActivity(), OnFragmentManager {
         }
     }
 
+
     override fun onBackPressed() {
         if (frame_new_article.visibility == View.VISIBLE) {
             frame_new_article.visibility = View.INVISIBLE
@@ -167,7 +171,15 @@ class MainActivity : AppCompatActivity(), OnFragmentManager {
             var i = stack.pop()
             viewPager.currentItem = i
         } else {
-            super.onBackPressed()
+            dialog.setTitle("Notification")
+            dialog.setMessage("Do you agree to exit the program?")
+            dialog.setPositiveButton("Yes", DialogInterface.OnClickListener { dialogInterface, i ->
+                super.onBackPressed()
+            })
+            dialog.setNegativeButton("No", DialogInterface.OnClickListener { dialogInterface, i ->
+                stack.push(0)
+            })
+            dialog.show()
         }
     }
 

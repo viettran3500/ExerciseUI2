@@ -1,4 +1,4 @@
-package com.viet.exerciseui2
+package com.viet.exerciseui2.model
 
 data class Home(
     var name: String,

@@ -1,4 +1,4 @@
-package com.viet.exerciseui2
+package com.viet.exerciseui2.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,6 +7,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.viet.exerciseui2.model.ListMenuOne
+import com.viet.exerciseui2.model.ListMenuTwo
+import com.viet.exerciseui2.R
+import com.viet.exerciseui2.adapter.MenuAdapter
 import kotlinx.android.synthetic.main.fragment_menu.view.*
 
 class MenuFragment : Fragment() {

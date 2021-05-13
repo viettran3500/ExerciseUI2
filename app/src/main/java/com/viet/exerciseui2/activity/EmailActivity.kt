@@ -1,11 +1,11 @@
-package com.viet.exerciseui2
+package com.viet.exerciseui2.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
-import android.os.Handler
-import android.os.HandlerThread
+import com.viet.exerciseui2.R
+import com.viet.exerciseui2.utils.updatePassword
 import kotlinx.android.synthetic.main.activity_email.*
 
 class EmailActivity : AppCompatActivity() {

@@ -1,6 +1,6 @@
-package com.viet.exerciseui2
+package com.viet.exerciseui2.utils
 
-import android.provider.ContactsContract
+import com.viet.exerciseui2.model.Account
 
 var acc = Account("email", "password")
 const val REQUEST_CODE_SING_UP = 0x9345

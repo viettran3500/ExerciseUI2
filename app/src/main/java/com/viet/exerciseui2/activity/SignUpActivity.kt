@@ -1,12 +1,13 @@
-package com.viet.exerciseui2
+package com.viet.exerciseui2.activity
 
 import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import kotlinx.android.synthetic.main.activity_login.*
-import kotlinx.android.synthetic.main.activity_sign_up.*
+import com.viet.exerciseui2.model.Account
+import com.viet.exerciseui2.R
+import com.viet.exerciseui2.utils.addAccount
 import kotlinx.android.synthetic.main.activity_sign_up.btnForgotPassword
 import kotlinx.android.synthetic.main.activity_sign_up.btnLogin
 import kotlinx.android.synthetic.main.activity_sign_up.btnSignUp
@@ -21,7 +22,8 @@ class SignUpActivity : AppCompatActivity() {
 
         btnLogin.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
+            setResult(Activity.RESULT_OK, intent)
+            finish()
         }
 
         btnForgotPassword.setOnClickListener {
